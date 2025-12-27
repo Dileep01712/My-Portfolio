@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+    --color-backgroundColor: #121212;
     --color-cardColor: #1e1e1f;
     --color-miniCardColor: #222223;
     --color-avatarColor: #393938;

@@ -7,29 +7,31 @@ import {
 
 export default function About() {
     return (
-        <section>
-            <h1 className="text-white text-3xl font-bold text-left">About Me</h1>
+        <div className="w-full md:w-auto">
+            <h1 className="text-white text-2xl md:text-3xl font-bold text-left select-none w-fit">About Me</h1>
 
-            <p className="border-b-6 border-iconColor w-9 rounded-full my-5" />
+            <p className="border-b-3 md:border-b-6 border-iconColor w-7 md:w-9 rounded-full my-2 md:my-5" />
 
-            <p className="text-white/80 leading-relaxed text-left">
-                I’m a web developer focused on creating modern, responsive, and accessible web applications. I enjoy building clean interfaces that provide a smooth user experience.
-            </p>
-            <br />
-            <p className="text-white/80 leading-relaxed text-left">
-                As a beginner, I’m actively learning through hands-on projects and experimentation. I focus on writing readable code and improving performance and usability. I’m motivated to grow and take on new challenges as a developer.
-            </p>
+            <div className="text-white/80 leading-relaxed text-left select-none space-y-4">
+                <p className="text-white/80 leading-relaxed text-left select-none">
+                    I’m a web developer focused on creating modern, responsive, and accessible web applications. I enjoy building clean interfaces that provide a smooth user experience.
+                </p>
+
+                <p className="text-white/80 leading-relaxed text-left select-none">
+                    As a beginner, I’m actively learning through hands-on projects and experimentation. I focus on writing readable code and improving performance and usability. I’m motivated to grow and take on new challenges as a developer.
+                </p>
+            </div>
 
             {/* What I'm doing */}
-            <h1 className="text-white text-2xl font-bold text-left mt-10">What I'm doing</h1>
-            <div className="grid grid-cols-2 my-6 gap-8">
+            <h1 className="text-white text-2xl font-bold text-left mt-10 select-none w-fit">What I'm doing</h1>
+            <div className="grid md:grid-cols-2 mt-6 gap-5 md:gap-8">
                 <div className="flex bg-miniCardColor p-6 rounded-2xl w-full shadow-shadowColor">
                     <IoBrushOutline className="text-iconColor h-16 w-16 my-auto mr-5" />
                     <div className="text-left">
-                        <h1 className="text-xl font-bold text-white">
+                        <h1 className="text-xl font-bold text-white select-none">
                             Web design
                         </h1>
-                        <p className="mt-2 text-white/80">
+                        <p className="mt-2 text-white/80 select-none">
                             The most modern and high-quality design made at a professional level.
                         </p>
                     </div>
@@ -38,10 +40,10 @@ export default function About() {
                 <div className="flex bg-miniCardColor p-6 rounded-2xl w-full shadow-shadowColor">
                     <IoCodeSlashOutline className="text-iconColor h-16 w-16 my-auto mr-5" />
                     <div className="text-left">
-                        <h1 className="text-xl font-bold text-white">
+                        <h1 className="text-xl font-bold text-white select-none">
                             Web development
                         </h1>
-                        <p className="mt-2 text-white/80">
+                        <p className="mt-2 text-white/80 select-none">
                             High-quality development of sites at the professional level.
                         </p>
                     </div>
@@ -50,10 +52,10 @@ export default function About() {
                 <div className="flex bg-miniCardColor p-6 rounded-2xl w-full shadow-shadowColor">
                     <IoColorPaletteOutline className="text-iconColor h-16 w-16 my-auto mr-5" />
                     <div className="text-left">
-                        <h1 className="text-xl font-bold text-white">
+                        <h1 className="text-xl font-bold text-white select-none">
                             UI / UX Optimization
                         </h1>
-                        <p className="mt-2 text-white/80">
+                        <p className="mt-2 text-white/80 select-none">
                             Enhancing UX with clean design and smooth interactions.
                         </p>
                     </div>
@@ -62,15 +64,15 @@ export default function About() {
                 <div className="flex bg-miniCardColor p-6 rounded-2xl w-full shadow-shadowColor">
                     <IoSpeedometerOutline className="text-iconColor h-16 w-16 my-auto mr-5" />
                     <div className="text-left">
-                        <h1 className="text-xl font-bold text-white">
+                        <h1 className="text-xl font-bold text-white select-none">
                             Performance & SEO
                         </h1>
-                        <p className="mt-2 text-white/80">
+                        <p className="mt-2 text-white/80 select-none">
                             Fast-loading, SEO-optimized websites focused on performance & discoverability.
                         </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }

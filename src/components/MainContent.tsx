@@ -19,13 +19,13 @@ export default function MainContent() {
     const [activeTab, setActiveTab] = useState<TabKey>("about");
 
     return (
-        <section className="flex-1 bg-cardColor border border-borderColor rounded-2xl px-7.5 py-9">
-            <div className="flex absolute top-15 right-[158.5px] bg-secondaryColor border border-borderColor rounded-tr-2xl rounded-bl-2xl px-12 py-5 gap-10">
+        <section className="flex-1 bg-cardColor border border-borderColor rounded-2xl p-4 md:px-7.5 md:py-9">
+            <div className="flex fixed md:absolute bottom-0 md:bottom-auto md:top-15 left-0 md:left-auto md:right-[158.5px] bg-secondaryColor border border-borderColor rounded-t-2xl md:rounded-t-none md:rounded-tr-2xl md:rounded-bl-2xl px-12 py-5 gap-10 w-full md:w-auto z-10">
                 {tabs.map((tab) => (
                     <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
-                        className={`font-semibold transition cursor-pointer ${activeTab === tab.id ? "text-iconColor" : "text-white/80 hover:text-white/65"}`}
+                        className={`font-semibold transition cursor-pointer select-none ${activeTab === tab.id ? "text-iconColor" : "text-white/80 hover:text-white/65"}`}
                     >
                         {tab.label}
                     </button>
