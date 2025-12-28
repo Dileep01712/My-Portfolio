@@ -31,7 +31,7 @@ export default function Sidebar() {
     };
 
     return (
-        <aside className="w-full md:w-68.75 shrink-0 mb-4">
+        <aside className="w-full md:w-68.75 shrink-0 mb-4 md:mb-0">
             <div className="sticky top-6 bg-cardColor border border-borderColor rounded-3xl p-4 md:p-6">
 
                 <div className="flex md:block items-start">
@@ -48,11 +48,11 @@ export default function Sidebar() {
                     <img src="/avatar.png" alt="avatar" className="w-20 h-20 md:w-37 md:h-37 mx-0 md:mx-auto rounded-3xl md:rounded-4xl bg-avatarColor md:mt-9 select-none" />
 
                     <div className="grid grid-rows-2 my-auto gap-2 pl-5">
-                        <h2 className="text-white text-2xl md:text-3xl font-semibold text-center md:mt-6 w-fit md:mx-auto">
+                        <h2 className="font-Degular text-white text-2xl md:text-3xl font-semibold text-center md:mt-6 w-fit md:mx-auto">
                             Dileep Yadav
                         </h2>
 
-                        <p className="text-xs font-semibold text-white/90 text-center md:mt-4.5 bg-secondaryColor p-1.5 w-20 md:w-32 md:mx-auto rounded-lg select-none h-fit">
+                        <p className="font-Lato text-xs text-white/90 text-center md:mt-4.5 bg-secondaryColor p-1.5 w-26 md:w-32 md:mx-auto rounded-lg select-none h-fit">
                             Web Developer
                         </p>
                     </div>
@@ -60,7 +60,7 @@ export default function Sidebar() {
 
 
                 {isSmallScreen && (
-                    <div className={`overflow-hidden transition-all duration-700 ${isOpen ? "max-h-500" : "max-h-0"}`}>
+                    <div className={`overflow-hidden transition-all duration-500 ${isOpen ? "max-h-500" : "max-h-0"}`}>
                         {/* Divider */}
                         <p className="border-b my-8 mx-1 border-borderColor transition-all duration-500" />
 
@@ -70,13 +70,15 @@ export default function Sidebar() {
                                 <p className="p-3.5 rounded-xl shadow-shadowColor">
                                     <IoMail title="EMAIL" className="text-iconColor h-4.5 w-4.5" />
                                 </p>
-                                <div className="pl-5">
-                                    <p className="text-white/60 text-xs text-left font-semibold select-none mt-1.5">EMAIL</p>
+                                <div className="pl-5 my-auto">
+                                    <p className="font-Degular text-white/60 text-xs text-left select-none">
+                                        EMAIL
+                                    </p>
                                     <a
                                         href="mailto:dy3398214@gmail.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-sm text-white"
+                                        className="font-Lato text-sm text-white"
                                     >
                                         dy3398214@gmail.com
                                     </a>
@@ -87,9 +89,11 @@ export default function Sidebar() {
                                 <p className="p-3.5 rounded-xl shadow-shadowColor">
                                     <IoCalendar title="BIRTHDAY" className="text-iconColor h-4.5 w-4.5" />
                                 </p>
-                                <div className="pl-5">
-                                    <p className="text-white/60 text-xs text-left font-semibold select-none mt-1.5">BIRTHDAY</p>
-                                    <p className="text-sm text-white mt-0.5 select-none">
+                                <div className="pl-5 my-auto">
+                                    <p className="font-Degular text-white/60 text-xs text-left select-none">
+                                        BIRTHDAY
+                                    </p>
+                                    <p className="font-Lato text-sm text-white mt-0.5 select-none">
                                         17<sup>th</sup> August 2004
                                     </p>
                                 </div>
@@ -99,9 +103,13 @@ export default function Sidebar() {
                                 <p className="p-3.5 rounded-xl my-auto shadow-shadowColor">
                                     <IoLocation title="LOCATION" className="text-iconColor h-4.5 w-4.5" />
                                 </p>
-                                <div className="pl-5">
-                                    <p className="text-white/60 text-xs text-left font-semibold select-none mt-1.5">LOCATION</p>
-                                    <p className="text-sm text-white mt-0.5">Mumbai, Maharashtra, India</p>
+                                <div className="pl-5 my-auto">
+                                    <p className="font-Degular text-white/60 text-xs text-left select-none">
+                                        LOCATION
+                                    </p>
+                                    <p className="font-Lato text-sm text-white text-left mt-0.5">
+                                        Mumbai, Maharashtra, India
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +129,9 @@ export default function Sidebar() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <p className="text-white text-base font-semibold select-none">GitHub</p>
+                                        <p className="font-Degular text-white select-none">
+                                            GitHub
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -136,7 +146,9 @@ export default function Sidebar() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <p className="text-white text-base font-semibold select-none">LinkedIn</p>
+                                        <p className="font-Degular text-white select-none">
+                                            LinkedIn
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -153,11 +165,17 @@ export default function Sidebar() {
                             <div className="flex my-8">
                                 <p className="p-3.5 rounded-xl shadow-shadowColor">
                                     <IoMail title="EMAIL" className="text-iconColor h-4.5 w-4.5" />
-                                </p> <div className="pl-5">
-                                    <p className="text-white/60 text-xs text-left font-semibold select-none mt-1.5">
+                                </p>
+                                <div className="pl-5 my-auto">
+                                    <p className="font-Degular text-white/60 text-[13px] text-left select-none">
                                         EMAIL
                                     </p>
-                                    <a href="mailto:dy3398214@gmail.com" target="_blank" rel="noopener noreferrer" className="text-sm text-white" >
+                                    <a
+                                        href="mailto:dy3398214@gmail.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-Lato text-sm text-white"
+                                    >
                                         dy3398214@gmail.com
                                     </a>
                                 </div>
@@ -167,11 +185,11 @@ export default function Sidebar() {
                                 <p className="p-3.5 rounded-xl shadow-shadowColor">
                                     <IoCalendar title="BIRTHDAY" className="text-iconColor h-4.5 w-4.5" />
                                 </p>
-                                <div className="pl-5">
-                                    <p className="text-white/60 text-xs text-left font-semibold select-none mt-1.5">
+                                <div className="pl-5 my-auto">
+                                    <p className="font-Degular text-white/60 text-[12px] text-left select-none">
                                         BIRTHDAY
                                     </p>
-                                    <p className="text-sm text-white mt-0.5 select-none">
+                                    <p className="font-Lato text-sm text-white mt-0.5 select-none">
                                         17<sup>th</sup> August 2004
                                     </p>
                                 </div>
@@ -180,11 +198,11 @@ export default function Sidebar() {
                                 <p className="p-3.5 rounded-xl my-auto shadow-shadowColor">
                                     <IoLocation title="LOCATION" className="text-iconColor h-4.5 w-4.5" />
                                 </p>
-                                <div className="pl-5">
-                                    <p className="text-white/60 text-xs text-left font-semibold select-none mt-1.5">
+                                <div className="pl-5 my-auto">
+                                    <p className="font-Degular text-white/60 text-xs text-left select-none">
                                         LOCATION
                                     </p>
-                                    <p className="text-sm text-white mt-0.5 text-left">
+                                    <p className="font-Lato text-sm text-white mt-0.5 text-left">
                                         Mumbai, Maharashtra, India
                                     </p>
                                 </div>
@@ -201,7 +219,7 @@ export default function Sidebar() {
                                 </p>
                                 <div className="pl-5 my-auto">
                                     <a href="https://github.com/Dileep01712" target="_blank" rel="noopener noreferrer" >
-                                        <p className="text-white text-base font-semibold select-none">
+                                        <p className="font-Degular text-white select-none">
                                             GitHub
                                         </p>
                                     </a>
@@ -214,7 +232,7 @@ export default function Sidebar() {
                                 </p>
                                 <div className="pl-5 my-auto">
                                     <a href="https://www.linkedin.com/in/dileep-yadav-9b947727b/" target="_blank" rel="noopener noreferrer" >
-                                        <p className="text-white text-base font-semibold select-none">
+                                        <p className="font-Degular text-white select-none">
                                             LinkedIn
                                         </p>
                                     </a>

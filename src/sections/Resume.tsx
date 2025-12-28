@@ -1,4 +1,6 @@
 import { IoBook, IoBriefcaseOutline } from "react-icons/io5";
+import { educations } from "../data/educations";
+import { experiences } from "../data/experience";
 import { skills } from "../data/skills";
 
 export default function Resume() {
@@ -25,69 +27,30 @@ export default function Resume() {
             <div className="relative pl-14.25 space-y-7">
                 <div className="absolute left-5.75 -top-8 bottom-12 md:bottom-6 border border-borderColor" />
 
-                <div className="relative pl-3">
-                    <span className="absolute -left-10.25 top-2 h-4 w-4 rounded-full bg-iconColor border-4 border-borderColor" />
+                {educations.map((education, index) => (
+                    <div key={index} className="relative pl-3">
+                        <span className="absolute -left-10.25 top-2 h-4 w-4 rounded-full bg-iconColor border-4 border-borderColor" />
 
-                    <a
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
                         <h3 className="text-white font-semibold text-left">
-                            M.L. Dahanukar College of Commerce
+                            <a
+                                href={education.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {education.title}
+                            </a>
                         </h3>
-                    </a>
-                    <p className="text-iconColor text-sm mt-1 text-left select-none">
-                        2022 – 2025
-                    </p>
-                    <p className="text-white/70 text-sm mt-1 leading-relaxed text-left select-none">
-                        Bachelor of Science in Information Technology under Mumbai University.
-                    </p>
-                </div>
-
-                <div className="relative pl-3">
-                    <span className="absolute -left-10.25 top-2 h-4 w-4 rounded-full bg-iconColor border-4 border-borderColor" />
-
-                    <a
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <h3 className="text-white font-semibold text-left">
-                            N G Junior College of Commerce
-                        </h3>
-                    </a>
-                    <p className="text-iconColor text-sm mt-1 text-left select-none">
-                        2020 – 2022
-                    </p>
-                    <p className="text-white/70 text-sm mt-1 leading-relaxed text-left select-none">
-                        Completed Higher Secondary education with focus on commerce.
-                    </p>
-                </div>
-
-                <div className="relative pl-3">
-                    <span className="absolute -left-10.25 top-2 h-4 w-4 rounded-full bg-iconColor border-4 border-borderColor" />
-
-                    <a
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <h3 className="text-white font-semibold text-left">
-                            GSB Shri I. J. Patel High School
-                        </h3>
-                    </a>
-                    <p className="text-iconColor text-sm mt-1 text-left select-none">
-                        2017 – 2020
-                    </p>
-                    <p className="text-white/70 text-sm mt-1 leading-relaxed text-left select-none">
-                        Secondary school education with strong academic foundation.
-                    </p>
-                </div>
-
+                        <p className="text-iconColor text-sm mt-1 text-left select-none">
+                            {education.year}
+                        </p>
+                        <p className="text-white/70 text-sm mt-1 leading-relaxed text-left select-none">
+                            {education.description}
+                        </p>
+                    </div>
+                ))}
             </div>
 
-            {/* Experience */}
+            {/* Practical Experience */}
             <div className="flex my-8">
                 <p className="bg-cardColor p-3.5 rounded-xl shadow-shadowColor">
                     <IoBriefcaseOutline title="Experience" className="text-iconColor h-4.5 w-4.5" />
@@ -95,33 +58,35 @@ export default function Resume() {
 
                 <div className="pl-5 my-auto">
                     <p className="text-white text-2xl text-left font-bold select-none">
-                        Experience
+                        Practical Experience
                     </p>
                 </div>
             </div>
-            {/* <div className="relative pl-14.25 space-y-7">
-                <div className="absolute left-5.75 -top-8 bottom-6 border border-borderColor" />
 
-                <div className="relative pl-3">
-                    <span className="absolute -left-10.25 top-2 h-4 w-4 rounded-full bg-iconColor border-4 border-borderColor" />
+            {/* Project's Experience */}
+            <div className="relative pl-14.25 space-y-7">
+                <div className="absolute left-5.75 -top-8 bottom-23 md:bottom-6 border border-borderColor" />
 
-                    <a
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                {experiences.map((experience, index) => (
+                    <div key={index} className="relative pl-3">
+                        <span className="absolute -left-10.25 top-2 h-4 w-4 rounded-full bg-iconColor border-4 border-borderColor" />
+
                         <h3 className="text-white font-semibold text-left">
-                            M.L. Dahanukar College of Commerce
+                            <a
+                                href={experience.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {experience.title}
+                            </a>
                         </h3>
-                    </a>
-                    <p className="text-iconColor text-sm mt-1 text-left select-none">
-                        2022 – 2025
-                    </p>
-                    <p className="text-white/70 text-sm mt-1 leading-relaxed text-left select-none">
-                        Bachelor of Science in Information Technology under Mumbai University.
-                    </p>
-                </div>
-            </div> */}
+
+                        <p className="text-white/70 text-sm mt-1 leading-relaxed text-left select-none">
+                            {experience.description}
+                        </p>
+                    </div>
+                ))}
+            </div>
 
             <h1 className="text-white text-2xl font-bold text-left my-8 select-none w-fit">
                 My Skills

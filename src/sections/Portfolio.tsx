@@ -1,6 +1,6 @@
-import type { JSX } from "react";
+import { projects } from "../data/projects";
 
-export default function Portfolio(): JSX.Element {
+export default function Portfolio() {
     return (
         <section>
             <h1 className="text-white text-2xl md:text-3xl font-bold text-left select-none w-fit">Portfolio</h1>
@@ -9,60 +9,34 @@ export default function Portfolio(): JSX.Element {
 
             {/* Projects */}
             <div className="grid md:grid-cols-3 gap-8 mt-10">
-                <div className="border border-borderColor shadow-shadowColor rounded-2xl pb-2 overflow-hidden">
-                    <a
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img src="/icon.png" alt="Project-Image" className="w-full object-contain mx-auto rounded-xl select-none transition duration-300 transform-gpu origin-center hover:scale-105" />
-                    </a>
-                    <h1 className="text-white text-lg font-bold select-none pt-2">Sanvia</h1>
-                </div>
+                {projects.map((project, index) => (
+                    <div
+                        key={index}
+                        className="border border-borderColor shadow-shadowColor rounded-2xl p-0 overflow-hidden">
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <div className="overflow-hidden transition-transform duration-300 hover:scale-[1.05]">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full min-h-36.5 object-contain select-none text-white"
+                                    draggable={false}
+                                />
+                            </div>
+                        </a>
 
-                <div className="border border-borderColor shadow-shadowColor rounded-2xl pb-2 overflow-hidden">
-                    <a
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img src="/icon.png" alt="Project-Image" className="w-full object-contain mx-auto rounded-xl select-none transition duration-300 transform-gpu origin-center hover:scale-105" />
-                    </a>
-                    <h1 className="text-white text-lg font-bold select-none pt-2">Sanvia</h1>
-                </div>
+                        <h1 className="text-white text-lg font-bold select-none pt-2">
+                            {project.title}
+                        </h1>
 
-                <div className="border border-borderColor shadow-shadowColor rounded-2xl pb-2 overflow-hidden">
-                    <a
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img src="/icon.png" alt="Project-Image" className="w-full object-contain mx-auto rounded-xl select-none transition duration-300 transform-gpu origin-center hover:scale-105" />
-                    </a>
-                    <h1 className="text-white text-lg font-bold select-none pt-2">Sanvia</h1>
-                </div>
-
-                <div className="border border-borderColor shadow-shadowColor rounded-2xl pb-2 overflow-hidden">
-                    <a
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img src="/icon.png" alt="Project-Image" className="w-full object-contain mx-auto rounded-xl select-none transition duration-300 transform-gpu origin-center hover:scale-105" />
-                    </a>
-                    <h1 className="text-white text-lg font-bold select-none pt-2">Sanvia</h1>
-                </div>
-
-                <div className="border border-borderColor shadow-shadowColor rounded-2xl pb-2 overflow-hidden">
-                    <a
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img src="/icon.png" alt="Project-Image" className="w-full object-contain mx-auto rounded-xl select-none transition duration-300 transform-gpu origin-center hover:scale-105" />
-                    </a>
-                    <h1 className="text-white text-lg font-bold select-none pt-2">Sanvia</h1>
-                </div>
+                        <p className="text-white/70 text-sm text-left select-none line-clamp-2 mx-2.5 mb-3">
+                            {project.description}
+                        </p>
+                    </div>
+                ))}
             </div>
         </section >
     )

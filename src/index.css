@@ -16,3 +16,35 @@
 :root {
     background-color: #121212;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: white !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+@font-face {
+    font-family: 'Degular';
+    src: url('fonts/DegularSemibold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/LatoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-Degular {
+    font-family: 'Degular';
+}
+
+.font-Lato {
+    font-family: 'Lato';
+}
