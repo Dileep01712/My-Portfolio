@@ -1,4 +1,11 @@
-export const educations = [
+export interface Educations {
+    title: string;
+    year: string;
+    description: string;
+    link: string;
+}
+
+export const educations: Educations[] = [
     {
         title: "M.L. Dahanukar College of Commerce",
         year: "2022 – 2025",

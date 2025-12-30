@@ -1,4 +1,10 @@
-export const experiences = [
+export interface Experiences {
+    title: string;
+    description: string;
+    link: string;
+}
+
+export const experiences: Experiences[] = [
     {
         title: "Personal Music Player (Sanvia)",
         description: "Designed and developed a responsive portfolio using React, TypeScript, and Tailwind CSS. Implemented mobile- first layouts, animations, and optimized UI for performance.",

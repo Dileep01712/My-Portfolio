@@ -3,10 +3,31 @@ export type Skill = {
     percent: number;
 }
 
-export const skills = [
-    { name: "Web Design", percent: 70 },
-    { name: "React", percent: 60 },
-    { name: "Tailwind CSS", percent: 70 },
-    { name: "JavaScript", percent: 60 },
-    { name: "Git & GitHub", percent: 50 },
+export interface Skills {
+    name: string;
+    percentage: number;
+}
+
+export const skills: Skills[] = [
+    {
+        name: "Web Design",
+        percentage: 70
+    },
+    {
+        name: "React",
+        percentage: 60
+    },
+    {
+        name: "Tailwind CSS",
+        percentage: 70
+    },
+    {
+        name:
+            "JavaScript",
+        percentage: 60
+    },
+    {
+        name: "Git & GitHub",
+        percentage: 50
+    },
 ];

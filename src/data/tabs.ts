@@ -1,8 +1,25 @@
-export type TabKey = "about" | "resume" | "portfolio" | "contact";
+export type TabKey = "about" | "resume" | "projects" | "contact";
 
-export const tabs: {id: TabKey, label: string}[] = [
-    { id: "about", label: "About" },
-    { id: "resume", label: "Resume" },
-    { id: "portfolio", label: "Portfolio" },
-    { id: "contact", label: "Contact" },
+export interface Tabs {
+    id: TabKey;
+    label: string;
+}
+
+export const tabs: Tabs[] = [
+    {
+        id: "about",
+        label: "About"
+    },
+    {
+        id: "resume",
+        label: "Resume"
+    },
+    {
+        id: "projects",
+        label: "Projects"
+    },
+    {
+        id: "contact",
+        label: "Contact"
+    },
 ];
