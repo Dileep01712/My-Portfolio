@@ -14,23 +14,23 @@ export interface Expertise {
 
 export const expertise: Expertise[] = [
     {
-        title: "Web design",
-        description: "The most modern and high-quality design made at a professional level.",
-        icon: IoBrushOutline,
-    },
-    {
-        title: "Web development",
-        description: "High-quality development of sites at the professional level.",
+        title: "Frontend Development",
+        description: "Building responsive and interactive web interfaces using React, TypeScript, and modern CSS frameworks.",
         icon: IoCodeSlashOutline,
     },
     {
-        title: "UI / UX Optimization",
-        description: "Enhancing UX with clean design and smooth interactions.",
+        title: "UI Implementation",
+        description: "Translating designs into clean, accessible, and user-friendly interfaces with attention to detail.",
         icon: IoColorPaletteOutline,
     },
     {
-        title: "Performance & SEO",
-        description: "Fast-loading, SEO-optimized websites focused on performance & discoverability.",
+        title: "Performance Optimization",
+        description: "Improving load times, component efficiency, and overall user experience in web applications.",
         icon: IoSpeedometerOutline,
+    },
+    {
+        title: "API Integration",
+        description: "Integrating frontend applications with backend APIs and handling data flow effectively.",
+        icon: IoBrushOutline,
     },
 ];

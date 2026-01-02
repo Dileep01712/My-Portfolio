@@ -45,7 +45,7 @@ export const Details = ({ items }: DetailsProps) => {
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="font-Degular text-white text-left cursor-pointer"
+                                    className="font-Degular text-white text-left cursor-pointer select-none"
                                 >
                                     {item.name}
                                 </a>

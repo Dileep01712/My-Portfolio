@@ -9,11 +9,11 @@ export default function About() {
 
             <div className="my-5 md:my-10 space-y-4">
                 <p className="font-Lato md:leading-relaxed text-white/80 text-left select-none">
-                    I’m a web developer focused on creating modern, responsive, and accessible web applications. I enjoy building clean interfaces that provide a smooth user experience.
+                    I’m a frontend-focused web developer who enjoys building modern, responsive, and user-friendly web applications. I work mainly with React, TypeScript, and Tailwind CSS to create clean interfaces with smooth user experiences.
                 </p>
 
                 <p className="font-Lato md:leading-relaxed text-white/80 text-left select-none">
-                    As a beginner, I’m actively learning through hands-on projects and experimentation. I focus on writing readable code and improving performance and usability. I’m motivated to grow and take on new challenges as a developer.
+                    I learn by building real projects, experimenting with features, and improving existing code. My focus is on writing clean, readable code, optimizing performance, and understanding how frontend connects with backend APIs. I’m continuously improving my skills and aiming to grow into a strong full-stack developer.
                 </p>
             </div>
 

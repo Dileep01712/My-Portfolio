@@ -41,7 +41,7 @@ export default function Sidebar() {
                         </h2>
 
                         <p className="font-Lato text-xs text-white/90 text-center md:my-1.5 bg-secondaryColor px-2.5 py-1.5 w-fit h-fit lg:mx-auto rounded-lg select-none">
-                            Web Developer
+                            Frontend Developer
                         </p>
                     </div>
                 </div>
