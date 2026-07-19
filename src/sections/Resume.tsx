@@ -1,7 +1,7 @@
 import { IoBook, IoBriefcaseOutline } from "react-icons/io5";
 import { educations } from "../data/educations";
 import { experiences } from "../data/experience";
-import { skills } from "../data/skills";
+import { skillCategories } from "../data/skills";
 
 export default function Resume() {
     return (
@@ -51,7 +51,7 @@ export default function Resume() {
                 ))}
             </div>
 
-            {/* Practical Experience */}
+            {/* Technical Projects */}
             <div className="flex my-8">
                 <p className="bg-cardColor p-3.5 rounded-xl shadow-shadowColor">
                     <IoBriefcaseOutline title="Experience" className="text-iconColor h-4.5 w-4.5" />
@@ -59,7 +59,7 @@ export default function Resume() {
 
                 <div className="pl-5 my-auto">
                     <p className="font-Degular text-white text-2xl text-left select-none">
-                        Practical Experience
+                        Technical Projects
                     </p>
                 </div>
             </div>
@@ -91,16 +91,19 @@ export default function Resume() {
             <h1 className="font-Degular text-white text-2xl text-left my-8 select-none w-fit">My Skills</h1>
             {/* List of skills */}
             <div className="border border-borderColor shadow-shadowColor rounded-2xl p-4 space-y-5">
-                {skills.map((skill) => (
-                    <div key={skill.name}>
-                        <div className="flex justify-between mb-2">
-                            <p className="font-Lato text-white select-none">{skill.name}</p>
-                            <p className="font-Lato text-white/60 select-none">{skill.percentage}%</p>
-                        </div>
+                {skillCategories.map((cat) => (
+                    <div key={cat.category}>
+                        <h3 className="text-white font-Lato text-lg text-left mb-3 select-none">{cat.category}</h3>
 
-                        <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                            <div className="h-full bg-linear-to-r from-iconColor to-yellow-500 rounded-full"
-                                style={{ width: `${skill.percentage}%` }} />
+                        <div className="flex flex-wrap gap-2 select-none">
+                            {cat.skills.map((skill) => (
+                                <span
+                                    key={skill}
+                                    className="px-3 py-1 bg-white/10 text-white rounded-full text-sm font-Lato border border-white/20"
+                                >
+                                    {skill}
+                                </span>
+                            ))}
                         </div>
                     </div>
                 ))}

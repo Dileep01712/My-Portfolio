@@ -1,6 +1,5 @@
 import type { IconType } from "react-icons";
 import {
-    IoCalendar,
     IoLocation,
     IoLogoGithub,
     IoLogoLinkedin,
@@ -21,12 +20,6 @@ export const personalDetails: DetailItem[] = [
         value: "dy3398214@gmail.com",
         icon: IoMail,
         type: "email",
-    },
-    {
-        name: "BIRTHDAY",
-        value: "17th August 2004",
-        icon: IoCalendar,
-        type: "text",
     },
     {
         name: "LOCATION",

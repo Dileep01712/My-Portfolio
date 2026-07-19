@@ -95,20 +95,18 @@ export default function Contact() {
     return (
         <section>
             <h1 className="font-Degular text-white text-2xl md:text-4xl text-left select-none w-fit">Contact</h1>
-
             <p className="h-0.75 md:h-1.5 bg-linear-to-r from-iconColor to-yellow-500 w-7 md:w-10 rounded-full my-2 md:my-4" />
 
-            {/* Map */}
-            <div className="border border-borderColor shadow-shadowColor h-60 md:h-95 rounded-2xl my-5 md:my-10 select-none">
-                <iframe
-                    src="https://www.google.com/maps?q=Vile Parle West, Mumbai, Maharashtra, India&z=15&output=embed"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="h-full w-full rounded-2xl dark:invert dark:hue-rotate-180"
-                ></iframe>
+            <div className="mt-6 mb-6 md:mb-28">
+                <h2 className="font-Degular text-white text-xl md:text-2xl text-left select-none mb-2">Let's Connect</h2>
+                <p className="font-Lato text-white/70 text-sm md:text-base text-left">
+                    I am currently open for full-time Frontend Developer roles. Whether you have a question, a project idea, or just want to say hi, feel free to drop a message below. I'll get back to you as soon as possible!
+                </p>
             </div>
 
-            <h1 className="font-Degular text-white text-2xl md:text-3xl text-left select-none w-fit">Contact Form</h1>
-            <form ref={formRef} onSubmit={sendEmail} className="grid md:grid-cols-2 pt-6 md:pt-8">
+            <h1 className="font-Degular text-white text-2xl md:text-3xl text-left select-none w-fit">Send a Message</h1>
+
+            <form ref={formRef} onSubmit={sendEmail} className="grid md:grid-cols-2 pt-4 md:pt-6">
                 <input
                     type="text"
                     name="name"
@@ -116,7 +114,7 @@ export default function Contact() {
                     placeholder="Full name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`font-Lato text-white/80 text-sm md:text-base border shadow-shadowColor px-5 py-3 md:p-3.5 rounded-2xl select-none col-span-2 md:col-span-1 mb-5 md:mr-5 ${errors.name ? "border-red-500" : "border-borderColor"}`}
+                    className={`font-Lato text-white/80 text-sm md:text-base border shadow-shadowColor px-5 py-3 md:p-3.5 rounded-2xl select-none col-span-2 md:col-span-1 mb-5 md:mr-5 bg-transparent ${errors.name ? "border-red-500" : "border-borderColor"}`}
                 />
 
                 <input
@@ -126,7 +124,7 @@ export default function Contact() {
                     placeholder="Email address"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`font-Lato text-white/80 text-sm md:text-base border shadow-shadowColor px-5 py-3 md:p-3.5 rounded-2xl select-none col-span-2 md:col-span-1 mb-5 ${errors.email ? "border-red-500" : "border-borderColor"}`}
+                    className={`font-Lato text-white/80 text-sm md:text-base border shadow-shadowColor px-5 py-3 md:p-3.5 rounded-2xl select-none col-span-2 md:col-span-1 mb-5 bg-transparent ${errors.email ? "border-red-500" : "border-borderColor"}`}
                 />
 
                 <textarea
@@ -136,7 +134,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="font-Lato text-white/80 text-sm md:text-base border border-borderColor shadow-shadowColor p-4 rounded-2xl col-span-2 h-32 md:h-36 select-none resize-none"
+                    className="font-Lato text-white/80 text-sm md:text-base border border-borderColor shadow-shadowColor p-4 rounded-2xl col-span-2 h-32 md:h-36 select-none resize-none bg-transparent"
                 />
 
                 <p className={`font-Lato text-left min-h-6 w-fit my-3 text-sm md:text-base
@@ -153,7 +151,7 @@ export default function Contact() {
                 <button
                     type="submit"
                     disabled={!isFormValid}
-                    className={`flex justify-center text-iconColor font-Degular border border-borderColor shadow-shadowColor w-full md:w-fit p-4 rounded-2xl select-none gap-2 col-span-2 md:ml-auto ${isFormValid ? "cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
+                    className={`flex justify-center text-iconColor font-Degular border border-borderColor shadow-shadowColor w-full md:w-fit px-8 py-3 rounded-2xl select-none gap-2 col-span-2 md:ml-auto transition-colors hover:bg-borderColor ${isFormValid ? "cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
                 >
                     {isSending ? (
                         <>
@@ -162,12 +160,12 @@ export default function Contact() {
                         </>
                     ) : (
                         <>
-                            <IoSend className="-rotate-50 my-auto" />
+                            <IoSend className="-rotate-12 my-auto" />
                             Send Message
                         </>
                     )}
                 </button>
             </form>
-        </section >
-    )
+        </section>
+    );
 };

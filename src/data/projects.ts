@@ -2,7 +2,6 @@ import Sanvia from "../assets/sanvia.webp";
 import PromptSlide from "../assets/promptslide.webp";
 import CloudNotes from "../assets/cloudnotes.webp";
 import FinanceDashboard from "../assets/financedashboard.webp";
-import MyOnlineMeal from "../assets/myonlinemeal.webp";
 
 export interface Projects {
     title: string;
@@ -35,11 +34,5 @@ export const projects: Projects[] = [
         description: "The Finance-Dashboard project provides real- time insights into financial data, offering a comprehensive view of key metrics and trends.It features interactive visualizations and customizable reports for stakeholders to monitor expenses, revenue, and financial health efficiently.Additionally, it includes a predictive analytics module that forecast",
         image: FinanceDashboard,
         link: "https://github.com/Dileep01712/Finance-Dashboard",
-    },
-    {
-        title: "My Online Meal",
-        description: "Welcome to MyOnlineMeal, your ultimate destination for hassle-free online food ordering! Explore a diverse menu curated with culinary expertise, offering a delightful array of dishes crafted by our skilled chefs.",
-        image: MyOnlineMeal,
-        link: "https://github.com/Dileep01712/My-Online-Meal",
     }
 ];

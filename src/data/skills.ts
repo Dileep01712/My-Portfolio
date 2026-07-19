@@ -1,33 +1,19 @@
-export type Skill = {
-    name: string;
-    percent: number;
+export interface SkillCategory {
+    category: string;
+    skills: string[];
 }
 
-export interface Skills {
-    name: string;
-    percentage: number;
-}
-
-export const skills: Skills[] = [
+export const skillCategories: SkillCategory[] = [
     {
-        name: "Web Design",
-        percentage: 70
+        category: "Frontend",
+        skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5/CSS3"],
     },
     {
-        name: "React",
-        percentage: 60
+        category: "Backend & DB",
+        skills: ["Node.js", "Express", "FastAPI", "MongoDB"],
     },
     {
-        name: "Tailwind CSS",
-        percentage: 70
-    },
-    {
-        name:
-            "JavaScript",
-        percentage: 60
-    },
-    {
-        name: "Git & GitHub",
-        percentage: 50
+        category: "Tools",
+        skills: ["Git", "GitHub", "VS Code"],
     },
 ];
